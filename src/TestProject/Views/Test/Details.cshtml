@@ -1,0 +1,80 @@
+@model TestProject.Models.Test
+
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Html.DisplayFor(model=>model.Name)</h2>
+<h2>@Context.Request.Query["Id"]</h2>
+
+<div >
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cv)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cv)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            
+            @Html.DisplayNameFor(model => model.Profile)
+        </dt>
+        <dd>
+           @* @Html.DisplayFor(model => model.Profile)*@
+            <span class="zoom" id='ex1'>
+            <img src="~/data/pp/@Model.Profile" class="img-responsive col-md-8" />
+                </span>
+        </dd>
+    </dl>
+</div>
+<label class="text-danger">Related Product</label>
+<div id="SearchData"></div>
+
+@section Scripts {
+<script>
+		$(document).ready(function(){
+			//$('#ex1').zoom();
+			//$('#ex1').zoom({ on:'grab' });
+			//$('#ex1').zoom({ on:'click' });
+			$('#ex1').zoom({ on:'toggle' });
+		});
+		$(function () {
+
+		    
+
+		    var search = 2;
+		    //var search =@Context.Request.Query["Id"];
+            
+		        $("#SearchData").load("@Url.Action("SearchStudentAjax", "Test")",
+                    {
+                        Search:search
+
+                    });
+		            //,
+                    // function () { alert("task done") }
+                    
+                    //);
+
+		   
+
+		});
+
+
+</script>
+    }

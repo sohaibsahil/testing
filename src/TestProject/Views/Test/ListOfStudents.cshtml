@@ -1,0 +1,56 @@
+@model IEnumerable<TestProject.Models.Test>
+
+@{
+    ViewData["Title"] = "ListOfStudents";
+}
+
+<h2>ListOfStudents</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cv)
+            </th>
+            <th>
+                                @Html.DisplayNameFor(model => model.Name)
+                                <a href="~/Views/Test/ListOfStudents.cshtml">~/Views/Test/ListOfStudents.cshtml</a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Cv)*@
+                <a href="@Url.Action("Download", new {filePath= item.Cv })">Download</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Profile)*@
+                <img src="~/data/pp/@item.Profile" class="img-responsive  img-circle" />
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

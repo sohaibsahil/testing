@@ -1,0 +1,61 @@
+@model TestProject.Models.Test
+
+@{
+    ViewData["Title"] = "AddStudent";
+}
+
+<h2>AddStudent</h2>
+
+<form asp-action="AddStudent" method="post" enctype="multipart/form-data">
+    <div class="form-horizontal">
+        <h4>Test</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+       
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cv" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Cv" class="form-control" type="file" name="Cv" id="Cv"/>
+                <span asp-validation-for="Cv" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Profile" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Profile" class="form-control" type="file"  id="Profile" name="Profile"/>
+                <span asp-validation-for="Profile" class="text-danger" />
+            </div>
+        </div>
+
+        <div class="g-recaptcha" data-sitekey="6LevYQkUAAAAACZSo5TvnGTrL7si8huCSVSQb4Yr"></div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<a href="http://api.clickatell.com/http/sendmsg?user=sohaib_ahmad&password=JFKTeNPOLdMdQK&api_id=3629020&to=923400525838&text=hello
+">send sms</a>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+}

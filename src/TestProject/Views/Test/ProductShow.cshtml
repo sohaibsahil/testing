@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TestProject.Models.Test>
+@foreach (var item in Model)
+{
+    <div class="panel panel-success col-md-4">
+        <div class="col-md-12 background1 panel-body">
+            <div class="col-md-12 ">
+                <img src="~/data/pp/@item.Profile" class="img-responsive img-thumbnail" />
+            </div>
+            
+            
+                <div class="col-md-12">Title</div>
+                <div class="col-md-12">
+                    <div class="col-md-3">rollno</div>
+                    <div class="col-md-3">class</div>
+                    <div class="col-md-3">batch</div>
+                    <div class="col-md-3">batch</div>
+                    <div class="clearfix"></div>
+                </div>
+            
+
+            <div class="col-md-12">@Html.ActionLink("Details", "Details", new {id=@item.Id })</div>
+        </div>
+    </div>
+}
+<div class="clearfix"></div>

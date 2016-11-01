@@ -1,0 +1,23 @@
+﻿
+
+<button class="btn"  value="Home">Home</button>
+<div id="Home"></div>
+@section scripts{
+    <script>
+        $(function () {
+
+            $(".btn").click(function () {
+               
+                $("#Home").load("@Url.Action("SearchStudentAjax1", "Test")"
+                    
+
+                    );
+
+
+            });
+        });
+
+    </script>
+
+
+}

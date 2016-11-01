@@ -1,0 +1,108 @@
+﻿
+<form asp-action="First" asp-controller="Test" method="post" enctype="multipart/form-data">
+
+    <div id="accordion1">
+
+        <h1 id="againShow">First Step</h1>
+        <div id="hide">
+            <fieldset>
+                <input type="text" class="form-control" /><br />
+                <input type="text" class="form-control" /><br />
+                <input type="email" class="form-control" /><br />
+                <input type="submit" value="Go To NextStep" class="btn btn-danger" id="next" onclick="sohaib()" />
+            </fieldset>
+        </div>
+
+        <h1 id="2nd" onclick="sohaib()">Seconde Step</h1>
+        <div id="show">
+            <fieldset>
+                <input type="text" id="date" class="form-control" /><br />
+                <input type="text" class="form-control" /><br />
+                <input type="email" class="form-control" /><br />
+                <input type="submit" value="Go To Back" class="btn btn-danger" id="back" onclick="sohaib()" />
+                <input type="submit" value="Go To NextStep" class="btn btn-danger" id="next3" onclick="sohaib()" />
+            </fieldset>
+        </div>
+        <h1 id="3rd" onclick="sohaib()">Third Step</h1>
+        <div id="3rdBox">
+            <fieldset>
+                <input type="text" id="date" class="form-control" /><br />
+                <input type="text" class="form-control" /><br />
+                <input type="email" class="form-control" /><br />
+                <input type="submit" value="Go To Back 2nd Step" class="btn btn-danger" id="back3" onclick="sohaib()" />
+                <input type="submit" value="Submit" class="btn btn-success" />
+            </fieldset>
+        </div>
+    </div>
+</form>
+ 
+
+
+
+
+
+<form class="form-inline">
+    <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+        <div class="input-group">
+            <input type="text" class="form-control" name="price" id="exampleInputAmount" placeholder="Amount">
+            <div class="input-group-addon" id="tooltip" style="cursor:pointer;" title="enter your price here">?</div>
+        </div>
+    </div>
+    <button type="submit" onclick="done()" class="btn btn-primary">Done</button>
+</form>
+<div id="progressbar"></div>
+
+@section scripts{
+
+    <script>
+
+        $(function sohaib() {
+            
+            $("#accordion1").accordion();
+            $("#next,#2nd").click(function () {
+                $("#show").show();
+                $("#hide").hide();
+                $("#3rdBox").hide();
+            });
+            $("#next3,#3rd").click(function () {
+                $("#hide").hide();
+                $("#show").hide();
+                $("#3rdBox").show();
+            });
+            $("#back").click(function () {
+                $("#show").hide();
+                $("#hide").show();
+                $("#3rdBox").hide();
+            });
+            $("#back3").click(function () {
+                $("#show").show();
+                $("#3rdBox").hide();
+                $("#hide").hide();
+            });
+            $("#againShow").click(function () {
+                //$("#hide").hide();
+                $("#show").hide();
+                $("#hide").show();
+            });
+
+            //tooltip
+            $("#tooltip").tooltip();
+
+
+        });
+
+        //progress bar start here
+        $(function done(){
+            if ($('#exampleInputAmount').val() == '') {
+                $("#progressbar").progressbar({ value: 10 });
+                
+            }
+            else if ($('#exampleInputAmount').val() != '') {
+                $("#progressbar").progressbar({ value: 100 });
+               
+            }
+        });
+    </script>
+
+}

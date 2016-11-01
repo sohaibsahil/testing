@@ -1,0 +1,32 @@
+@model IEnumerable<TestProject.Models.Test>
+
+@{
+    ViewData["Title"] = "ListProduct";
+}
+
+
+<table class="table">
+
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profile)
+            </td>
+            <td>
+                <a asp-action="AddCart" asp-route-id="@item.Id">Add TO Cart</a> |
+               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
