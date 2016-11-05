@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.5.2/",
-    "signature": "403f6ccc9a58cb3f70198f2b7ba636a4717aedaf"
+    "signature": "d3f3b2130be5067b7df655395177892761fad193"
   },
   "compilationOptions": {
     "defines": [
@@ -17,6 +17,7 @@
     ".NETFramework,Version=v4.5.2": {
       "TestProject/1.0.0": {
         "dependencies": {
+          "microsoft-web-helpers": "1.15.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
           "Microsoft.AspNetCore.Authentication.Google": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0",
@@ -34,15 +35,27 @@
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+          "DotNet.Highcharts": "4.0.0",
+          "Microsoft.AspNetCore.Session": "1.0.0"
         },
         "compile": {
           "TestProject.exe": {}
         }
       },
+      "DotNet.Highcharts/4.0.0": {
+        "compile": {
+          "lib/DotNet.Highcharts.dll": {}
+        }
+      },
       "Libuv/1.9.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1"
+        }
+      },
+      "microsoft-web-helpers/1.15.0": {
+        "compile": {
+          "lib/Microsoft.Web.Helpers.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/1.0.0": {
@@ -539,6 +552,18 @@
         },
         "compile": {
           "lib/net451/Microsoft.AspNetCore.Server.Kestrel.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Session/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Options": "1.0.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.AspNetCore.Session.dll": {}
         }
       },
       "Microsoft.AspNetCore.StaticFiles/1.0.0": {
@@ -1243,6 +1268,7 @@
     ".NETFramework,Version=v4.5.2/": {
       "TestProject/1.0.0": {
         "dependencies": {
+          "microsoft-web-helpers": "1.15.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
           "Microsoft.AspNetCore.Authentication.Google": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0",
@@ -1260,15 +1286,27 @@
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+          "DotNet.Highcharts": "4.0.0",
+          "Microsoft.AspNetCore.Session": "1.0.0"
         },
         "runtime": {
           "TestProject.exe": {}
         }
       },
+      "DotNet.Highcharts/4.0.0": {
+        "runtime": {
+          "lib/DotNet.Highcharts.dll": {}
+        }
+      },
       "Libuv/1.9.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1"
+        }
+      },
+      "microsoft-web-helpers/1.15.0": {
+        "runtime": {
+          "lib/Microsoft.Web.Helpers.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/1.0.0": {
@@ -1765,6 +1803,18 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNetCore.Server.Kestrel.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Session/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Options": "1.0.0"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNetCore.Session.dll": {}
         }
       },
       "Microsoft.AspNetCore.StaticFiles/1.0.0": {
@@ -2309,10 +2359,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "DotNet.Highcharts/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MnMMTUQXqoOMPN8GRMWniMm15nqbIAUVS+S8biXPbJW3z2fwz1Fxd5x08uQ5KvZB4+5LskYBOSEtYl00/Z2wMQ=="
+    },
     "Libuv/1.9.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-9Q7AaqtQhS8JDSIvRBt6ODSLWDBI4c8YxNxyCQemWebBFUtBbc6M5Vi5Gz1ZyIUlTW3rZK9bIr5gnVyv0z7a2Q=="
+    },
+    "microsoft-web-helpers/1.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E03usZ0xc8huXJc8uOaJKuz8URDI63GJB1zGAwB2Y+sjJHPAF2JqxiK3f7vyTvAY7rt2OOdd09ioMO7AAkIAvQ=="
     },
     "Microsoft.AspNetCore.Antiforgery/1.0.0": {
       "type": "package",
@@ -2538,6 +2598,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-TNRTsufpdeoa88kR2NU+mO0IZIyJCcBurkdLx4I9d7MpLV1MCnRCrIeTgFIOWpB+j6kytUUXblzhsd0rfk6+bQ=="
+    },
+    "Microsoft.AspNetCore.Session/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RPoUeyNC0OXCcelURzsf5PZnrFC97HNUhQJMMEhBjmDNSAhFpKxgLJydKC3J/G7FxPkO4ciXu37zafPlA8AZqw=="
     },
     "Microsoft.AspNetCore.StaticFiles/1.0.0": {
       "type": "package",

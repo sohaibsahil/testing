@@ -1,13 +1,14 @@
 @model IEnumerable<TestProject.Models.Test>
 
 @{
-    ViewData["Title"] = "AddCart";
+    ViewData["Title"] = "CartAddProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>AddCart</h2>
+<h2>CartAddProduct</h2>
 
 <p>
-    <a asp-action="Create">Continue to shoping</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -43,13 +44,10 @@
                 @Html.DisplayFor(modelItem => item.Profile)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Remove</a> |
+               
             </td>
         </tr>
 }
     </tbody>
 </table>
-@*<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=1000&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="1000" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>*@
-<iframe src="https://maps.googleapis.com/maps/api/directions/json?origin=sydney,au&destination=perth,au&waypoints=via:-37.81223%2C144.96254%7Cvia:-34.92788%2C138.60008&key=AIzaSyBBws-wrRMpCwMGWpHu4j0L55Q5O-P6-bE"></iframe>

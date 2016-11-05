@@ -1,5 +1,5 @@
---temp-output:C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\obj\Debug\net452\
---out:C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\bin\Debug\net452\TestProject.exe
+--temp-output:C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\obj\Debug\net452\
+--out:C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\bin\Debug\net452\TestProject.exe
 --define:DEBUG
 --define:TRACE
 --define:NET452
@@ -14,6 +14,8 @@
 --version:1.0.0.0
 --informational-version:1.0.0
 --target-framework:.NETFramework,Version=v4.5.2
+--reference:C:\Users\sohaib_2\.nuget\packages\DotNet.Highcharts\4.0.0\lib\DotNet.Highcharts.dll
+--reference:C:\Users\sohaib_2\.nuget\packages\microsoft-web-helpers\1.15.0\lib\Microsoft.Web.Helpers.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0\lib\net451\Microsoft.AspNetCore.Antiforgery.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.Authentication\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.Authentication.Cookies\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -60,6 +62,7 @@
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.Routing.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Routing.Abstractions.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.Server.IISIntegration\1.0.0\lib\net451\Microsoft.AspNetCore.Server.IISIntegration.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.Server.Kestrel\1.0.0\lib\net451\Microsoft.AspNetCore.Server.Kestrel.dll
+--reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.Session\1.0.0\lib\net451\Microsoft.AspNetCore.Session.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.StaticFiles\1.0.0\lib\net451\Microsoft.AspNetCore.StaticFiles.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.AspNetCore.WebUtilities\1.0.0\lib\net451\Microsoft.AspNetCore.WebUtilities.dll
 --reference:C:\Users\sohaib_2\.nuget\packages\Microsoft.CodeAnalysis.Common\1.3.0\lib\net45\Microsoft.CodeAnalysis.dll
@@ -189,36 +192,37 @@
 --reference:C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.ServiceModel.dll
 --reference:C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\System.Diagnostics.Tracing.dll
 --reference:C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\System.Reflection.Primitives.dll
---resource:"C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\obj\Debug\net452\TestProjectdotnet-compile.deps.json",TestProject.deps.json
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Program.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Startup.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Controllers\AccountController.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Controllers\HomeController.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Controllers\ManageController.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Controllers\TestController.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Data\ApplicationDbContext.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Data\Migrations\00000000000000_CreateIdentitySchema.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Data\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ApplicationUser.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\Test.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\TestDbContext.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\AccountViewModels\ForgotPasswordViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\AccountViewModels\LoginViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\AccountViewModels\RegisterViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\AccountViewModels\ResetPasswordViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\AccountViewModels\SendCodeViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\AccountViewModels\VerifyCodeViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\AddPhoneNumberViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\ChangePasswordViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\ConfigureTwoFactorViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\FactorViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\IndexViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\ManageLoginsViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\RemoveLoginViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\SetPasswordViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Models\ManageViewModels\VerifyPhoneNumberViewModel.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Services\IEmailSender.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Services\ISmsSender.cs
-C:\Users\sohaib_2\documents\visual studio 2015\Projects\TestProject\src\TestProject\Services\MessageServices.cs
+--resource:"C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\obj\Debug\net452\TestProjectdotnet-compile.deps.json",TestProject.deps.json
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Program.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Startup.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Controllers\AccountController.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Controllers\AdminController.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Controllers\HomeController.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Controllers\ManageController.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Controllers\TestController.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Data\ApplicationDbContext.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Data\Migrations\00000000000000_CreateIdentitySchema.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Data\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ApplicationUser.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\Test.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\TestDbContext.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\AccountViewModels\ForgotPasswordViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\AccountViewModels\LoginViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\AccountViewModels\RegisterViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\AccountViewModels\ResetPasswordViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\AccountViewModels\SendCodeViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\AccountViewModels\VerifyCodeViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\AddPhoneNumberViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\ChangePasswordViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\ConfigureTwoFactorViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\FactorViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\IndexViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\ManageLoginsViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\RemoveLoginViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\SetPasswordViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Models\ManageViewModels\VerifyPhoneNumberViewModel.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Services\IEmailSender.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Services\ISmsSender.cs
+C:\Users\sohaib_2\Source\Repos\testing\src\TestProject\Services\MessageServices.cs

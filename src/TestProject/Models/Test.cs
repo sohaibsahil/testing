@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace TestProject.Models
 {
     public partial class Test
@@ -10,6 +11,8 @@ namespace TestProject.Models
         public string Password { get; set; }
         public string Cv { get; set; }
         public string Profile { get; set; }
+        //public Boolean Remember { get; set; }
        
     }
 }
+ 

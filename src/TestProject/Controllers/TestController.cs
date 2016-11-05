@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Web.Helpers;
 using TestProject.Models;
 using System.IO;
 using Newtonsoft.Json;
+using System.Net;
+
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.DotNet.Cli.Utils.CommandParsing;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using DotNet.Highcharts.Options;
+using Microsoft.AspNetCore.Http;
+using System.Collections;
 
 namespace TestProject.Controllers
 {
@@ -153,6 +162,7 @@ namespace TestProject.Controllers
         [HttpPost]
         public IActionResult Login( Test test)
         {
+
             //Test SearcExistence = context.Test.Where(e => e.Name == test.Name).SingleOrDefault<Test>();
             //if (SearcExistence != null)
             //{
@@ -172,18 +182,28 @@ namespace TestProject.Controllers
             //    context.Test.Add(test);
             //    context.SaveChanges();
             //    ViewBag.success = "enterd sexfully";
+            ////}
+            //if (ModelState.IsValid)
+            //{
+            //    Test login = context.Test.Where(e => e.Name == test.Name && e.Password == test.Password).SingleOrDefault<Test>();
+            //    return View(login);
             //}
-            if (ModelState.IsValid)
-            {
-                Test login = context.Test.Where(e => e.Name == test.Name && e.Password == test.Password).SingleOrDefault<Test>();
-                return View(login);
-            }
-            else
-            {
-                return View();
-            }
-           
-            
+
+            // check remember me checkbox click or not
+            //cookies work present here check cookies in cricbuzz page
+            //if (test.Remember)
+            //{
+            //    Microsoft.AspNetCore.Http.CookieOptions options = new Microsoft.AspNetCore.Http.CookieOptions();
+            //    options.Expires = DateTime.Now.AddMinutes(1);
+            //    Response.Cookies.Append("Name", test.Name);
+            //    Response.Cookies.Append("Password", test.Password);
+
+            //}
+
+
+            //return RedirectToAction("Cricbuzz");
+            return View();
+
         }
 
         public IActionResult SearchStudent()
@@ -263,8 +283,8 @@ namespace TestProject.Controllers
         }
         public IActionResult AddCart(int? id)
         {
-            IList<Test> cart = context.Test.Where(e=>e.Id==id).ToList<Test>();
-            return View(cart);
+          //  IList<Test> cart = context.Test.Where(e=>e.Id==id).ToList<Test>();
+            return View();
         }
          class student
         {
@@ -293,5 +313,67 @@ namespace TestProject.Controllers
             IList<Test> dynamic = context.Test.ToList<Test>();
             return View(dynamic);
         }
+
+
+        public IActionResult Cricbuzz()
+        {
+          if(Request.Cookies["Name"] !=null)
+            {
+                ViewBag.data = Request.Cookies["Name"];
+
+            }
+            else
+            {
+                ViewBag.data1 = "Data not enterd succefully in cookies";
+                
+            }
+            return View();
+        }
+
+        public IActionResult Chart()
+        {
+
+         
+        
+            return View();
+        }
+
+        public IActionResult CartShowProduct()
+        {
+            IList<Test> cartproduct = context.Test.ToList<Test>();
+            return View(cartproduct);
+        }
+        public IActionResult CartAddProduct(int? id)
+        {
+
+            // add value of product to session
+            
+            Test product = context.Test.Where(e => e.Id == id).FirstOrDefault();
+            HttpContext.Session.SetString("Name", "sohaib");
+
+            if (product != null)
+            {
+                
+                ArrayList idList= new ArrayList();
+
+                
+                    idList.Add(product.Id);
+
+                
+                //HttpContext.Session.SetInt32( "ProductId", idList);
+                ViewBag.messge = "One Product add succefully";
+                return RedirectToAction("CartShowProduct");
+
+            }
+            //product show in add to cart when click add to cart button in menue bar
+            else if(HttpContext.Session.Get("Name")!=null)
+            {
+                IList<Test> show = context.Test.Where(e => e.Id == HttpContext.Session.GetInt32("ProductId")).ToList<Test>();
+                return View(show);
+            }
+
+            return View();
+        }
+
     }
     }

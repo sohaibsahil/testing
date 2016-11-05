@@ -1,0 +1,53 @@
+@model IEnumerable<TestProject.Models.Test>
+
+@{
+    ViewData["Title"] = "CartShowProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    if (ViewBag.messge != null)
+    {
+       <h1>@ViewBag.messge</h1>
+    }
+    else
+    {
+        @ViewBag.messge
+
+    }
+}
+
+
+<h2>CartShowProduct</h2>
+
+
+<table class="table">
+   
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profile)
+                <img src="~/data/pp/@item.Profile" class="img-responsives img-circle" />
+            </td>
+           
+            <td>
+                <a asp-action="CartAddProduct" asp-route-id="@item.Id">Add Cart</a> |
+               
+            </td>
+        </tr>
+        
+}
+        
+    </tbody>
+</table>
+
+<div class="alert-info">
+    <a href="@Url.Action("CartAddProduct","Test")" style="font-size:larger" target="_top">Cart Detail</a>
+</div>

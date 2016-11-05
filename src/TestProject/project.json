@@ -2,6 +2,7 @@
   "userSecretsId": "aspnet-TestProject-148fbd42-ee53-4250-af1f-b7fa328cd015",
 
   "dependencies": {
+    "microsoft-web-helpers": "1.15.0",
     "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
     "Microsoft.AspNetCore.Authentication.Google": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
@@ -39,7 +40,9 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "DotNet.Highcharts": "4.0.0",
+    "Microsoft.AspNetCore.Session": "1.0.0"
   },
 
   "tools": {

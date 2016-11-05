@@ -6,7 +6,8 @@
 
 <h2>Login</h2>
 @{ 
-    if(ViewBag.searchmessage !=null)
+    
+    @*if(ViewBag.searchmessage !=null)
     {
    @ViewBag.searchmessage
         <br />
@@ -21,10 +22,10 @@
     {
         @ViewBag.success
     
-    }
+    }*@
+
 
 }
-
 <form asp-action="Login" method="post" >
     <div class="form-horizontal">
         <h4>Test</h4>
@@ -43,6 +44,13 @@
             <div class="col-md-10">
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger" />
+            </div>
+        </div>
+         <div class="form-group">
+            <label asp-for="Remember" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Remember" class="checkbox" type="checkbox" />
+                <span asp-validation-for="Remember" class="text-danger" />
             </div>
         </div>
 

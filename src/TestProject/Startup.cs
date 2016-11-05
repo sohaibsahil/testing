@@ -61,6 +61,7 @@ namespace TestProject
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddSession();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -112,6 +113,7 @@ namespace TestProject
             }
 
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseIdentity();
 
@@ -121,7 +123,7 @@ namespace TestProject
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Test}/{action=First}/{id?}");
+                    template: "{controller=Test}/{action=Cricbuzz}/{id?}");
             });
         }
     }
